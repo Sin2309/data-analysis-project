@@ -1,1 +1,3 @@
-# data-analysis-project
+# Data Analysis Project
+
+## 📁 Project Structure
