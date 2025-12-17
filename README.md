@@ -23,16 +23,15 @@ This project aims to answer three core questions to support business decisions:
 ### 1. **Week 1:** Defined problem & setup GitHub. (✅ Completed)
 ### 2. **Week 2:** Exploratory Data Analysis (EDA) with Python. (✅ Completed)
 Exploratory Data Analysis (EDA) to identify errors and understand data distribution before cleaning.
-*/
-**Data Quality Check**
-**Identify customers with unrealistic birth years** (To determine filtering threshold for Week 3)
-**Basic Statistics**
-**Analyze customer distribution by Education level**
-**Preliminary analysis of sales performance by channel**
+* **Data Quality Check**
+* **Identify customers with unrealistic birth years** (To determine filtering threshold for Week 3)
+* **Basic Statistics**
+* **Analyze customer distribution by Education level**
+* **Preliminary analysis of sales performance by channel**
 ### 3. **Week 3:** SQL Data Modelling & KPI Definition. (✅ Completed)
-**SQL Logic defining the Data Model for Visualization Tool**
-**Create Dimension Table** (Attributes)
-**Create Fact Table** (Metrics)
+* **SQL Logic defining the Data Model for Visualization Tool**
+* **Create Dimension Table** (Attributes)
+* **Create Fact Table** (Metrics)
 ### 📊 Data Model & KPIs
 We have designed a **Star Schema** data model to optimize performance in Tableau:
 #### **Data Schema**
