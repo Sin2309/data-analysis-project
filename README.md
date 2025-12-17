@@ -20,41 +20,36 @@ This project aims to answer three core questions to support business decisions:
 * **/report** → Presentation slides, final insights, and documentation
 
 ## 🔄 Workflow Summary
-1. **Week 1:** Defined problem & setup GitHub. (✅ Completed)
+# 1. **Week 1:** Defined problem & setup GitHub. (✅ Completed)
 
-2. **Week 2:** Exploratory Data Analysis (EDA) with Python. (✅ Completed)
+# 2. **Week 2:** Exploratory Data Analysis (EDA) with Python. (✅ Completed)
 Exploratory Data Analysis (EDA) to identify errors and understand data distribution before cleaning.
 */
-
--- 1. Data Quality Check
--- Identify customers with unrealistic birth years (To determine filtering threshold for Week 3)
+**Data Quality Check**
+**Identify customers with unrealistic birth years** (To determine filtering threshold for Week 3)
 SELECT * FROM marketing_data 
 WHERE Year_Birth < 1940; 
--- Finding: Found 3 customers born in 1893, 1899, 1900 -> Need to be removed.
-
--- Check for missing income values (Null Income)
+**Finding:** Found 3 customers born in 1893, 1899, 1900 -> Need to be removed.
+**Check for missing income values** (Null Income)
 SELECT COUNT(*) as Missing_Income_Count 
 FROM marketing_data 
 WHERE Income IS NULL;
-
--- 2. Basic Statistics
--- Analyze customer distribution by Education level
+**Basic Statistics**
+**Analyze customer distribution by Education level**
 SELECT Education, COUNT(ID) as Total_Customers
 FROM marketing_data
 GROUP BY Education
 ORDER BY Total_Customers DESC;
-
--- Preliminary analysis of sales performance by channel
+**Preliminary analysis of sales performance by channel**
 SELECT 
     SUM(NumWebPurchases) as Total_Web,
     SUM(NumStorePurchases) as Total_Store,
     SUM(NumCatalogPurchases) as Total_Catalog
 FROM marketing_data;
 
-3. **Week 3:** SQL Data Modelling & KPI Definition. (✅ Completed)
--- SQL Logic defining the Data Model for Visualization Tool
-
--- Create Dimension Table (Attributes)
+# 3. **Week 3:** SQL Data Modelling & KPI Definition. (✅ Completed)
+**SQL Logic defining the Data Model for Visualization Tool**
+**Create Dimension Table** (Attributes)
 CREATE VIEW Dim_Customer AS
 SELECT 
     ID, 
@@ -66,8 +61,7 @@ SELECT
     Income 
 FROM marketing_data
 WHERE Year_Birth > 1940;
-
--- Create Fact Table (Metrics)
+**Create Fact Table** (Metrics)
 CREATE VIEW Fact_Performance AS
 SELECT 
     ID, 
@@ -81,20 +75,18 @@ FROM marketing_data
 WHERE Year_Birth > 1940;
 📊 Data Model & KPIs
 We have designed a **Star Schema** data model to optimize performance in Tableau:
-
-### Data Schema
+# **Data Schema**
 * **Dim_Customer:** Stores static customer attributes (ID, Age, Education, Marital Status).
 * **Fact_Performance:** Stores transactional data (Sales, Recency, Campaign Responses).
 * **Relationship:** One-to-Many relationship on `ID`.
-
-### Key Metrics Defined
+# **Key Metrics Defined**
 * **Total Spend:** Sum of all product categories (`MntWines` + `MntFruits` + ...).
 * **Conversion Rate:** `Total Accepted Campaigns` / `Total Customers`.
 * **Age:** Calculated as `2014 - Year_Birth`.
 * **Active Users:** Customers with `Recency < 60 days`.
 
-4. **Visualize** → Build interactive charts in `/dashboard`
-5. **Report** → Summarize findings in `/report`
+# 4. **Visualize** → Build interactive charts in `/dashboard`
+# 5. **Report** → Summarize findings in `/report`
 
 ## 👥 Team Members
 * Phan Dương Ánh Linh - mssv: 22010053
