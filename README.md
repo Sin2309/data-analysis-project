@@ -79,7 +79,7 @@ SELECT
     Response AS Last_Campaign_Success
 FROM marketing_data
 WHERE Year_Birth > 1940;
-## 📊 Data Model & KPIs
+📊 Data Model & KPIs
 We have designed a **Star Schema** data model to optimize performance in Tableau:
 
 ### Data Schema
