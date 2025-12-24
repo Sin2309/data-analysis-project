@@ -47,13 +47,15 @@ Built a **Star Schema** to optimize performance for Tableau.
 **Goal:** Visualize insights using Tableau to answer the 3 Decision Questions.
 
 #### a. Dashboard Components
+Here is the preview of our interactive dashboard:
+![Dashboard Preview]([/dashboard/Final_Dashboard_Overview.png](https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+
 We constructed an interactive dashboard with 4 key visualizations:
 1.  **Revenue by Education (Bar Chart):** Identified "Graduation" and "PhD" as the top revenue-generating segments.
 2.  **Income vs. Spending (Scatter Plot):** Confirmed a strong positive correlation between income and spending, with specific outliers identified.
 3.  **Channel Efficiency (Bar Chart):** "Store" is the dominant channel, followed by "Web".
 4.  **The 'Kid Penalty' (Line Chart):** Visualized the negative impact of family size on conversion rates.
-Here is the preview of our interactive dashboard:
-![Dashboard Preview]([/dashboard/Final_Dashboard_Overview.png](https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+
 #### b. Key Strategic Findings
 * **High-Value Profile:** Customers with **PhD/Graduation** degrees and **Income > $70k** drive ~60% of revenue.
 * **The "Kid Penalty":** Household structure is the strongest predictor of campaign success.
