@@ -29,20 +29,40 @@ Exploratory Data Analysis (EDA) to identify errors and understand data distribut
 * **Analyze customer distribution by Education level**
 * **Preliminary analysis of sales performance by channel**
 ### 3. **Week 3:** SQL Data Modelling & KPI Definition. (✅ Completed)
-* **SQL Logic defining the Data Model for Visualization Tool**
-* **Create Dimension Table** (Attributes)
-* **Create Fact Table** (Metrics)
-### 📊 Data Model & KPIs
-We have designed a **Star Schema** data model to optimize performance in Tableau:
-#### **Data Schema**
-* **Dim_Customer:** Stores static customer attributes (ID, Age, Education, Marital Status).
-* **Fact_Performance:** Stores transactional data (Sales, Recency, Campaign Responses).
-* **Relationship:** One-to-Many relationship on `ID`.
-##### **Key Metrics Defined**
-* **Total Spend:** Sum of all product categories (`MntWines` + `MntFruits` + ...).
-* **Conversion Rate:** `Total Accepted Campaigns` / `Total Customers`.
-* **Age:** Calculated as `2014 - Year_Birth`.
-* **Active Users:** Customers with `Recency < 60 days`.
+*/
+-- a. DATA CLEANING LOGIC
+-- Filter rules applied in Visualization Tool:
+-- Year_Birth >= 1940 (Removing outliers like 1893, 1900)
+-- Income <= 200,000 (Removing data entry error 666,666)
+
+-- b. DATA MODEL SCHAME (Star Schema)
+-- Dimension Table: Customer Profiles
+CREATE VIEW Dim_Customer AS
+SELECT 
+    ID, 
+    Year_Birth, 
+    (2014 - Year_Birth) AS Age,
+    Education, 
+    Marital_Status, 
+    Income, 
+    Kidhome, 
+    Teenhome,
+    Country
+FROM marketing_data
+WHERE Year_Birth >= 1940 AND Income <= 200000;
+-- Fact Table: Performance Metrics
+CREATE VIEW Fact_Performance AS
+SELECT 
+    ID, 
+    Recency, 
+    (MntWines + MntFruits + MntMeatProducts + MntFishProducts + MntSweetProducts + MntGoldProds) AS Total_Spend,
+    NumWebPurchases, 
+    NumStorePurchases, 
+    NumCatalogPurchases,
+    Response AS Last_Campaign_Success,
+    (AcceptedCmp1 + AcceptedCmp2 + AcceptedCmp3 + AcceptedCmp4 + AcceptedCmp5) AS Total_Campaigns_Accepted
+FROM marketing_data
+WHERE Year_Birth >= 1940 AND Income <= 200000;
 ### 4. **Visualize** → Build interactive charts in `/dashboard`
 ### 5. **Report** → Summarize findings in `/report`
 
