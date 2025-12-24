@@ -1,8 +1,8 @@
 # Data Analysis Project: Optimizing Marketing ROI
-Group: **Nova**
+**Group:** Nova
 
 ## 🎯 Problem Statement
-Marketing budgets are limited. The company runs multiple campaigns, but it is unclear which customer groups respond best or which channels create the most impact. A data-driven strategy is needed to optimize future marketing decisions. The marketing team is currently wasting budget on mass marketing campaigns without knowing which customers respond best. We need to identify high-value customer segments to optimize campaign ROI and reduce churn.
+Marketing budgets are limited. The company runs multiple campaigns, but it is unclear which customer groups respond best or which channels create the most impact. A data-driven strategy is needed to optimize future marketing decisions. We need to identify high-value customer segments to optimize campaign ROI and reduce churn.
 
 ## ❓ Decision Questions (Key KPIs)
 This project aims to answer three core questions to support business decisions:
@@ -14,62 +14,60 @@ This project aims to answer three core questions to support business decisions:
 
 ## 📁 Project Structure
 * **/data** → Raw & cleaned datasets (`marketing_data.csv`)
-* **/sql** → SQL scripts for data cleaning, joins, and KPI logic
-* **/notebooks** → Python/Colab notebooks for EDA, statistical checks, and visualization
-* **/dashboard** → Tableau Public link & Screenshots of interactive reporting
+* **/sql** → SQL scripts for data cleaning, Star Schema views (`Dim_Customer`, `Fact_Performance`)
+* **/notebooks** → Python/Colab notebooks for EDA & statistical checks
+* **/dashboard** → Tableau Public link & Dashboard Screenshots
 * **/report** → Presentation slides, final insights, and documentation
 
+---
+
 ## 🔄 Workflow Summary
-### 1. **Week 1:** Defined problem & setup GitHub. (✅ Completed)
-### 2. **Week 2:** Exploratory Data Analysis (EDA) with Python. (✅ Completed)
-Exploratory Data Analysis (EDA) to identify errors and understand data distribution before cleaning.
-* **Data Quality Check**
-* **Identify customers with unrealistic birth years** (To determine filtering threshold for Week 3)
-* **Basic Statistics**
-* **Analyze customer distribution by Education level**
-* **Preliminary analysis of sales performance by channel**
-### 3. **Week 3:** SQL Data Modelling & KPI Definition. (✅ Completed)
-#### a. DATA CLEANING LOGIC
-Filter rules applied in Visualization Tool:
-- Year_Birth >= 1940 (Removing outliers like 1893, 1900)
-- Income <= 200,000 (Removing data entry error 666,666)
-#### b. DATA MODEL SCHAME (Star Schema)
-Dimension Table: Customer Profiles
 
-CREATE VIEW Dim_Customer AS
-SELECT 
-    ID, 
-    Year_Birth, 
-    (2014 - Year_Birth) AS Age,
-    Education, 
-    Marital_Status, 
-    Income, 
-    Kidhome, 
-    Teenhome,
-    Country
-FROM marketing_data
-WHERE Year_Birth >= 1940 AND Income <= 200000;
-#### Fact Table: Performance Metrics
+### 1. **Week 1:** Planning & Setup (✅ Completed)
+* Defined problem statement & setup GitHub repository.
+* Established team roles and decision questions.
 
-CREATE VIEW Fact_Performance AS
-SELECT 
-    ID, 
-    Recency, 
-    (MntWines + MntFruits + MntMeatProducts + MntFishProducts + MntSweetProducts + MntGoldProds) AS Total_Spend,
-    NumWebPurchases, 
-    NumStorePurchases, 
-    NumCatalogPurchases,
-    Response AS Last_Campaign_Success,
-    (AcceptedCmp1 + AcceptedCmp2 + AcceptedCmp3 + AcceptedCmp4 + AcceptedCmp5) AS Total_Campaigns_Accepted
-FROM marketing_data
-WHERE Year_Birth >= 1940 AND Income <= 200000;
-### 4. **Visualize** → Build interactive charts in `/dashboard`
-### 5. **Report** → Summarize findings in `/report`
+### 2. **Week 2:** Exploratory Data Analysis (EDA) (✅ Completed)
+Used Python & SQL to identify errors and understand data distribution.
+* **Data Quality Check:** Identified outliers (Age > 100, Income > $600k) and null values.
+* **Findings:** * Found 3 customers born before 1900 (removed).
+    * Validated Income distribution to set filtering thresholds.
+
+### 3. **Week 3:** SQL Data Modelling (✅ Completed)
+Built a **Star Schema** to optimize performance for Tableau.
+* **Data Cleaning Logic:** Applied filters `Year_Birth >= 1940` and `Income <= 200,000`.
+* **Schema Design:**
+    * `Dim_Customer`: ID, Age, Education, Marital Status, Kidhome.
+    * `Fact_Performance`: Total Spend, Conversion Rate, Channel Purchases.
+* **KPI Definitions:**
+    * *Total Spend* = Sum of all Mnt products.
+    * *Conversion Rate* = Accepted Campaigns / Total Customers.
+
+### 4. **Week 4:** Dashboard & Strategic Insights (✅ Completed)
+**Goal:** Visualize insights using Tableau to answer the 3 Decision Questions.
+
+#### a. Dashboard Components
+We constructed an interactive dashboard with 4 key visualizations:
+1.  **Revenue by Education (Bar Chart):** Identified "Graduation" and "PhD" as the top revenue-generating segments.
+2.  **Income vs. Spending (Scatter Plot):** Confirmed a strong positive correlation between income and spending, with specific outliers identified.
+3.  **Channel Efficiency (Bar Chart):** "Store" is the dominant channel, followed by "Web".
+4.  **The 'Kid Penalty' (Line Chart):** Visualized the negative impact of family size on conversion rates.
+
+#### b. Key Strategic Findings
+* **High-Value Profile:** Customers with **PhD/Graduation** degrees and **Income > $70k** drive ~60% of revenue.
+* **The "Kid Penalty":** Household structure is the strongest predictor of campaign success.
+    * *0 Kids:* **~17.5%** Conversion Rate (High)
+    * *1 Kid:* **~12.2%** Conversion Rate (Medium)
+    * *2 Kids:* **~4.1%** Conversion Rate (Low)
+* **Channel Strategy:** While Stores drive volume, the **Web** channel is crucial for high-income, childless professionals.
+
+---
 
 ## 👥 Team Members
-* Phan Dương Ánh Linh - mssv: 22010053
-* Trần Khánh Linh - mssv: 22010022
-* Nguyễn Lê Bảo Uyên - mssv: 22070002
+* **Phan Dương Ánh Linh** (MSSV: 22010053)
+* **Trần Khánh Linh** (MSSV: 22010022)
+* **Nguyễn Lê Bảo Uyên** (MSSV: 22070002)
 
-## 🔗 Google Drive Backup
-* **Drive folder:** <insert [link](https://drive.google.com/drive/folders/1mBb-yUGS2zl9mDDt_n9sU09yt-iXiC2p?usp=share_link)>
+## 🔗 Project Resources
+* **Google Drive:** [https://drive.google.com/drive/folders/1mBb-yUGS2zl9mDDt_n9sU09yt-iXiC2p?usp=sharing]
+* **Tableau Public:** [Link to Dashboard]
