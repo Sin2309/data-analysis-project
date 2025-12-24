@@ -52,7 +52,8 @@ We constructed an interactive dashboard with 4 key visualizations:
 2.  **Income vs. Spending (Scatter Plot):** Confirmed a strong positive correlation between income and spending, with specific outliers identified.
 3.  **Channel Efficiency (Bar Chart):** "Store" is the dominant channel, followed by "Web".
 4.  **The 'Kid Penalty' (Line Chart):** Visualized the negative impact of family size on conversion rates.
-
+Here is the preview of our interactive dashboard:
+![Dashboard Preview]([/dashboard/Final_Dashboard_Overview.png](https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
 #### b. Key Strategic Findings
 * **High-Value Profile:** Customers with **PhD/Graduation** degrees and **Income > $70k** drive ~60% of revenue.
 * **The "Kid Penalty":** Household structure is the strongest predictor of campaign success.
@@ -69,5 +70,5 @@ We constructed an interactive dashboard with 4 key visualizations:
 * **Nguyễn Lê Bảo Uyên** (MSSV: 22070002)
 
 ## 🔗 Project Resources
-* **Google Drive:** [https://drive.google.com/drive/folders/1mBb-yUGS2zl9mDDt_n9sU09yt-iXiC2p?usp=sharing]
-* **Tableau Public:** [Link to Dashboard]
+* **Google Drive:** https://drive.google.com/drive/folders/1mBb-yUGS2zl9mDDt_n9sU09yt-iXiC2p?usp=sharing
+* **Tableau Public:** https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
