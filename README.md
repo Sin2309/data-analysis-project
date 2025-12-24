@@ -29,14 +29,12 @@ Exploratory Data Analysis (EDA) to identify errors and understand data distribut
 * **Analyze customer distribution by Education level**
 * **Preliminary analysis of sales performance by channel**
 ### 3. **Week 3:** SQL Data Modelling & KPI Definition. (✅ Completed)
-*/
--- a. DATA CLEANING LOGIC
--- Filter rules applied in Visualization Tool:
--- Year_Birth >= 1940 (Removing outliers like 1893, 1900)
--- Income <= 200,000 (Removing data entry error 666,666)
-
--- b. DATA MODEL SCHAME (Star Schema)
--- Dimension Table: Customer Profiles
+#### a. DATA CLEANING LOGIC
+Filter rules applied in Visualization Tool:
+Year_Birth >= 1940 (Removing outliers like 1893, 1900)
+Income <= 200,000 (Removing data entry error 666,666)
+#### b. DATA MODEL SCHAME (Star Schema)
+Dimension Table: Customer Profiles
 CREATE VIEW Dim_Customer AS
 SELECT 
     ID, 
@@ -50,7 +48,7 @@ SELECT
     Country
 FROM marketing_data
 WHERE Year_Birth >= 1940 AND Income <= 200000;
--- Fact Table: Performance Metrics
+#### Fact Table: Performance Metrics
 CREATE VIEW Fact_Performance AS
 SELECT 
     ID, 
