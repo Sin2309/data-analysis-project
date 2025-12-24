@@ -16,7 +16,7 @@ This project aims to answer three core questions to support business decisions:
 * **/data** → Raw & cleaned datasets (`marketing_data.csv`)
 * **/sql** → SQL scripts for data cleaning, joins, and KPI logic
 * **/notebooks** → Python/Colab notebooks for EDA, statistical checks, and visualization
-* **/dashboard** → Power BI (`.pbix`) files for interactive reporting
+* **/dashboard** → Tableau Public link & Screenshots of interactive reporting
 * **/report** → Presentation slides, final insights, and documentation
 
 ## 🔄 Workflow Summary
