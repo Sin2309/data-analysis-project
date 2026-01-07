@@ -61,11 +61,12 @@ Built a **Star Schema** to optimize performance for Tableau.
 
 ### 4. **Week 4:** Dashboard & Strategic Insights (✅ Completed)
 **Goal:** Visualize insights using Tableau to answer the 3 Decision Questions.
+<img width="2778" height="1370" alt="Dashboard 1" src="https://github.com/user-attachments/assets/c62b9660-c204-4041-847e-e005e7b22000" />
 
 #### a. Dashboard Components
 Here is the preview of our interactive dashboard:
 ![Dashboard Preview]([/dashboard/Final_Dashboard_Overview.png](https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
-![Uploading Dashboard 1.png…]()
+
 
 We constructed an interactive dashboard with 4 key visualizations:
 1.  **Revenue by Education (Bar Chart):** Identified "Graduation" and "PhD" as the top revenue-generating segments.
