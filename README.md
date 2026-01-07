@@ -81,16 +81,34 @@ We constructed an interactive dashboard with 4 key visualizations:
     * *2 Kids:* **~4.1%** Conversion Rate (Low)
 * **Channel Strategy:** While Stores drive volume, the **Web** channel is crucial for high-income, childless professionals.
 
-### 🤖 AI Agent Integration
+#### AI Agent Integration
 We utilized AI Agents to analyze customer clustering and validate our findings.
 * **Prompt:** "Analyze customer clusters based on income and family size to suggest budget reallocation."
 * **AI Insight:** Suggested shifting budget from large families (low conversion) to childless professionals (high conversion).
 
-#### 🚀 **Recommendations (Action Plan)**
+#### **Recommendations (Action Plan)**
 Based on the AI-Driven Analysis and Dashboard insights:
 1. Stop Wasting Budget: Cease all "Gold/Wine" premium marketing campaigns for families with 2+ children (Negative ROI predicted).
 2. Budget Reallocation: Shift 30% of the budget to strictly target the "Childless Professionals" segment (Income > $70k, 0 Kids).
 3. Channel Pivot: Enhance the Web user experience for the younger, tech-savvy demographic, while maintaining Store inventory for general shoppers.
+
+### Week 5: Final Insights & Strategic Recommendations
+
+#### Answers to Decision Questions
+1. **Customer Value:** High-income earners ($70k+) with **Graduation/PhD** degrees are the primary revenue drivers, as shown in our Income vs. Spending Scatter Plot.
+2. **Channel Efficiency:** **Store Purchases** dominate in volume, but the **Web channel** is the most effective gateway for high-income professionals.
+3. **The "Kid Penalty" Pattern:** We identified a critical trend where Campaign Conversion Rates plunge as family size increases (0 Kids: 17.5% vs. 2+ Kids: 4.1%).
+
+#### AI-Driven Recommendations
+Based on our AI Agent analysis of 2,240 customers:
+* **Stop Wasting Budget:** Cease all "Gold/Wine" premium campaigns for families with 2+ children (Negative ROI predicted).
+* **Strategic Reallocation:** Shift **30% of the budget** to target the "Childless Professionals" segment (Income > $70k, 0 Kids), which shows a 4x higher propensity to purchase.
+
+#### Project Reflection
+* **What worked well:** Successful integration of **SQL Star Schema** for data stability and **AI Agents** for rapid insight generation. Our Dashboard 2 provides a clear, interactive path to decision-making.
+* **What could be improved:** In future iterations, we aim to include **Shipping & Operational Costs** to calculate "Net Profit" instead of just "Revenue".
+* **Future Work:** Implementing **Predictive Modeling** (Churn Prediction) to anticipate customer behavior.
+
 ---
 
 ## 👥 Team Members
