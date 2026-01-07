@@ -49,6 +49,7 @@ Built a **Star Schema** to optimize performance for Tableau.
 #### a. Dashboard Components
 Here is the preview of our interactive dashboard:
 ![Dashboard Preview]([/dashboard/Final_Dashboard_Overview.png](https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+<img width="2778" height="1370" alt="Dashboard 2" src="https://github.com/user-attachments/assets/483e2a39-ff99-4a32-a9f4-d7891c5b6fce" />
 
 We constructed an interactive dashboard with 4 key visualizations:
 1.  **Revenue by Education (Bar Chart):** Identified "Graduation" and "PhD" as the top revenue-generating segments.
