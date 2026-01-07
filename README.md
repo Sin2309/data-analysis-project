@@ -61,12 +61,10 @@ Built a **Star Schema** to optimize performance for Tableau.
 
 ### 4. **Week 4:** Dashboard & Strategic Insights (✅ Completed)
 **Goal:** Visualize insights using Tableau to answer the 3 Decision Questions.
-<img width="2778" height="1370" alt="Dashboard 1" src="https://github.com/user-attachments/assets/c62b9660-c204-4041-847e-e005e7b22000" />
 
 #### a. Dashboard Components
 Here is the preview of our interactive dashboard:
-![Dashboard Preview]([/dashboard/Final_Dashboard_Overview.png](https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
-
+<img width="2778" height="1370" alt="Dashboard 1" src="https://github.com/user-attachments/assets/c62b9660-c204-4041-847e-e005e7b22000" />
 
 We constructed an interactive dashboard with 4 key visualizations:
 1.  **Revenue by Education (Bar Chart):** Identified "Graduation" and "PhD" as the top revenue-generating segments.
@@ -93,7 +91,7 @@ Based on the AI-Driven Analysis and Dashboard insights:
 2. Budget Reallocation: Shift 30% of the budget to strictly target the "Childless Professionals" segment (Income > $70k, 0 Kids).
 3. Channel Pivot: Enhance the Web user experience for the younger, tech-savvy demographic, while maintaining Store inventory for general shoppers.
 
-### Week 5: Final Insights & Strategic Recommendations
+### Week 5: Final Insights & Strategic Recommendations (✅ Completed)
 
 #### Answers to Decision Questions
 1. **Customer Value:** High-income earners ($70k+) with **Graduation/PhD** degrees are the primary revenue drivers, as shown in our Income vs. Spending Scatter Plot.
@@ -119,4 +117,4 @@ Based on our AI Agent analysis of 2,240 customers:
 
 ## 🔗 Project Resources
 * **Google Drive:** https://drive.google.com/drive/folders/1mBb-yUGS2zl9mDDt_n9sU09yt-iXiC2p?usp=sharing
-* **Tableau Public:** https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+* **Tableau Public:** https://public.tableau.com/shared/2Y8D2QH3Y?:display_count=n&:origin=viz_share_link
