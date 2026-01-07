@@ -21,6 +21,22 @@ This project aims to answer three core questions to support business decisions:
 
 ---
 
+## 📊 Data Dictionary
+Key variables used in the analysis:
+| Field | Description |
+| :--- | :--- |
+| `ID` | Unique customer identifier |
+| `Year_Birth` | Customer's birth year (Filtered: >= 1940) |
+| `Education` | Qualification (Graduation, PhD, Master, Basic, 2n Cycle) |
+| `Income` | Yearly household income (Filtered: <= $200k) |
+| `Kidhome/Teenhome`| Number of children/teenagers in household |
+| `Mnt[Product]` | Amount spent on Wines, Fruits, Meat, Fish, Sweet, Gold |
+| `Num[Channel]Purchases` | Number of purchases via Web, Catalog, or Store |
+| `AcceptedCmp1-5` | 1 if customer accepted the offer in the campaign, 0 otherwise |
+| `Response` | 1 if customer accepted the last campaign, 0 otherwise |
+
+---
+
 ## 🔄 Workflow Summary
 
 ### 1. **Week 1:** Planning & Setup (✅ Completed)
@@ -49,7 +65,7 @@ Built a **Star Schema** to optimize performance for Tableau.
 #### a. Dashboard Components
 Here is the preview of our interactive dashboard:
 ![Dashboard Preview]([/dashboard/Final_Dashboard_Overview.png](https://public.tableau.com/views/DataDecisionMarketingFinal/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
-<img width="2778" height="1370" alt="Dashboard 2" src="https://github.com/user-attachments/assets/483e2a39-ff99-4a32-a9f4-d7891c5b6fce" />
+![Uploading Dashboard 1.png…]()
 
 We constructed an interactive dashboard with 4 key visualizations:
 1.  **Revenue by Education (Bar Chart):** Identified "Graduation" and "PhD" as the top revenue-generating segments.
@@ -65,6 +81,16 @@ We constructed an interactive dashboard with 4 key visualizations:
     * *2 Kids:* **~4.1%** Conversion Rate (Low)
 * **Channel Strategy:** While Stores drive volume, the **Web** channel is crucial for high-income, childless professionals.
 
+### 🤖 AI Agent Integration
+We utilized AI Agents to analyze customer clustering and validate our findings.
+* **Prompt:** "Analyze customer clusters based on income and family size to suggest budget reallocation."
+* **AI Insight:** Suggested shifting budget from large families (low conversion) to childless professionals (high conversion).
+
+#### 🚀 **Recommendations (Action Plan)**
+Based on the AI-Driven Analysis and Dashboard insights:
+1. Stop Wasting Budget: Cease all "Gold/Wine" premium marketing campaigns for families with 2+ children (Negative ROI predicted).
+2. Budget Reallocation: Shift 30% of the budget to strictly target the "Childless Professionals" segment (Income > $70k, 0 Kids).
+3. Channel Pivot: Enhance the Web user experience for the younger, tech-savvy demographic, while maintaining Store inventory for general shoppers.
 ---
 
 ## 👥 Team Members
